@@ -43,6 +43,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_5sdp"
+            android:maxLines="2"
             android:fontFamily="@font/poppins_regular"
             android:text="@string/title_test"
             android:textColor="@color/dark_blue"
@@ -67,6 +68,17 @@
 
         </TextView>
 
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/light_blue_30"
+            app:layout_constraintBottom_toBottomOf="@+id/productPrevPriceTV"
+            app:layout_constraintEnd_toEndOf="@+id/productPrevPriceTV"
+            app:layout_constraintStart_toStartOf="@+id/productPrevPriceTV"
+            app:layout_constraintTop_toTopOf="@+id/productPrevPriceTV">
+
+        </View>
+
         <TextView
             android:id="@+id/productPrevPriceTV"
             android:layout_width="wrap_content"
@@ -74,9 +86,10 @@
             android:layout_marginStart="@dimen/_6sdp"
             android:fontFamily="@font/poppins_regular"
             android:padding="@dimen/_2sdp"
+
             android:text="@string/prev_price_test"
             android:textColor="@color/light_blue_30"
-            android:textSize="@dimen/_10ssp"
+            android:textSize="@dimen/_8ssp"
             app:layout_constraintBottom_toBottomOf="@+id/productPriceTV"
             app:layout_constraintStart_toEndOf="@+id/productPriceTV"
             app:layout_constraintTop_toTopOf="@+id/productPriceTV">
@@ -94,12 +107,14 @@
             android:text="@string/reviewText"
             android:textColor="@color/dark_blue"
             android:textSize="@dimen/_10ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/productPriceTV">
 
         </TextView>
 
         <ImageView
+            android:id="@+id/imageView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_8sdp"
