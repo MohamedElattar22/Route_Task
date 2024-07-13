@@ -8,7 +8,7 @@
 
 <h2>Project Screenshots:</h2>
 
-![Screenshot 2024-07-13 232718](https://github.com/user-attachments/assets/30fa6300-c826-4c0f-be23-cbe04b5f65b7)
+![screens](https://github.com/user-attachments/assets/d8377f3b-a27f-4e91-9f3a-2e9f56967a27)
 
   
   
