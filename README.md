@@ -40,7 +40,5 @@ Technologies used in the project:
 *   Junit
 *   Retrofit
 *   OkHttp
+*   GIT
 
-<h2>🛡️ License:</h2>
-
-This project is licensed under the
