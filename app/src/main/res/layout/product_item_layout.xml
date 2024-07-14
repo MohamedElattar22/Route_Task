@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_140sdp"
+    android:layout_height="@dimen/_180sdp"
+    android:layout_margin="@dimen/_10sdp"
+
+    app:cardBackgroundColor="@color/white"
+    app:strokeColor="@color/light_blue_30"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/productImg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_90sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/test_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_2sdp"
+            android:elevation="@dimen/_60sdp"
+            android:src="@drawable/love_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/productTitleTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:maxLines="2"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/title_test"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/productImg">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/productPriceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/product_price_test"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/productTitleTV">
+
+        </TextView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/light_blue_30"
+            app:layout_constraintBottom_toBottomOf="@+id/productPrevPriceTV"
+            app:layout_constraintEnd_toEndOf="@+id/productPrevPriceTV"
+            app:layout_constraintStart_toStartOf="@+id/productPrevPriceTV"
+            app:layout_constraintTop_toTopOf="@+id/productPrevPriceTV">
+
+        </View>
+
+        <TextView
+            android:id="@+id/productPrevPriceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:fontFamily="@font/poppins_regular"
+            android:padding="@dimen/_2sdp"
+
+            android:text="@string/prev_price_test"
+            android:textColor="@color/light_blue_30"
+            android:textSize="@dimen/_8ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/productPriceTV"
+            app:layout_constraintStart_toEndOf="@+id/productPriceTV"
+            app:layout_constraintTop_toTopOf="@+id/productPriceTV">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/productRatingTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:drawableEnd="@drawable/star_raiting_icon"
+            android:drawablePadding="@dimen/_3sdp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/reviewText"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/productPriceTV">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:src="@drawable/add_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        </ImageView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

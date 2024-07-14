@@ -1,9 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">RouteTask</string>
     <string name="logo_icon">logo_icon</string>
     <string name="search_hint">what do you search for?</string>
     <string name="title_test">Nike Air Jordon Nike shoes flexible for wo..</string>
     <string name="product_price_test">EGP 1,100</string>
-    <string name="prev_price_test">1,500 EGP  </string>
+    <string name="prev_price_test">1,500 EGP</string>
     <string name="reviewText">Review (4.5)</string>
 </resources>
