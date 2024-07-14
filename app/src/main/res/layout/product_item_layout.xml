@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="@dimen/_140sdp"
-    android:layout_height="@dimen/_180sdp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:layout_margin="@dimen/_10sdp"
 
     app:cardBackgroundColor="@color/white"
@@ -30,8 +30,8 @@
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_2sdp"
-            android:elevation="@dimen/_60sdp"
+            android:elevation="@dimen/_1sdp"
+            android:outlineAmbientShadowColor="@color/black"
             android:src="@drawable/love_icon"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -43,14 +43,33 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_5sdp"
-            android:maxLines="2"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="@dimen/_11ssp"
             android:fontFamily="@font/poppins_regular"
             android:text="@string/title_test"
             android:textColor="@color/dark_blue"
-            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/productImg">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/productDescrTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_regular"
+            android:maxLines="1"
+            android:text="@string/title_test"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_9ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/productTitleTV">
 
         </TextView>
 
@@ -62,13 +81,14 @@
             android:fontFamily="@font/poppins_regular"
             android:text="@string/product_price_test"
             android:textColor="@color/dark_blue"
-            android:textSize="@dimen/_12ssp"
+            android:textSize="@dimen/_11ssp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/productTitleTV">
+            app:layout_constraintTop_toBottomOf="@+id/productDescrTV">
 
         </TextView>
 
         <View
+            android:id="@+id/view"
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:background="@color/light_blue_30"
@@ -83,13 +103,12 @@
             android:id="@+id/productPrevPriceTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginStart="@dimen/_4sdp"
             android:fontFamily="@font/poppins_regular"
             android:padding="@dimen/_2sdp"
-
             android:text="@string/prev_price_test"
             android:textColor="@color/light_blue_30"
-            android:textSize="@dimen/_8ssp"
+            android:textSize="@dimen/_9ssp"
             app:layout_constraintBottom_toBottomOf="@+id/productPriceTV"
             app:layout_constraintStart_toEndOf="@+id/productPriceTV"
             app:layout_constraintTop_toTopOf="@+id/productPriceTV">
@@ -106,7 +125,8 @@
             android:fontFamily="@font/poppins_regular"
             android:text="@string/reviewText"
             android:textColor="@color/dark_blue"
-            android:textSize="@dimen/_10ssp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:textSize="@dimen/_8ssp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/productPriceTV">
@@ -117,7 +137,7 @@
             android:id="@+id/imageView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_8sdp"
+            android:layout_margin="@dimen/_6sdp"
             android:src="@drawable/add_icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent">

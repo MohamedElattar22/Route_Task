@@ -58,14 +58,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchBar"
         app:spanCount="2"
-
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:listitem="@layout/product_item_layout">
 
     </androidx.recyclerview.widget.RecyclerView>
 
     <include
         android:id="@+id/loadingContent"
-        layout="@layout/loading_content_layout"></include>
+        layout="@layout/loading_content_layout"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </include>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

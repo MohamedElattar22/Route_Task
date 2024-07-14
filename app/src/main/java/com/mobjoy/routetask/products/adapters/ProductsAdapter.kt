@@ -36,19 +36,20 @@ class ProductsAdapter(var list: List<ProductsItem?>) :
         val prevPrice = item?.price.toString()
         val discount = item?.discountPercentage.toString()
         holder.viewBinding.productTitleTV.text = item?.title.toString()
+        holder.viewBinding.productDescrTV.text = item?.description.toString()
         holder.viewBinding.productPriceTV.text = "EGP ${calculateDiscount(prevPrice, discount)}"
         holder.viewBinding.productPrevPriceTV.text = "EGP ${item?.price.toString()}"
         holder.viewBinding.productRatingTV.text = "Review (${item?.rating.toString()})"
 
         Glide.with(holder.itemView)
-            .load(item?.images?.get(0).toString())
+            .load(item?.thumbnail)
             .into(holder.viewBinding.productImg)
 
     }
 
     private fun calculateDiscount(prevPrice: String, discount: String): String {
-        val totalMoneyDiscount = (prevPrice.toDouble() * (discount.toDouble() / 100))
-        val totalAfterDiscount = prevPrice.toDouble() - totalMoneyDiscount
+        val totalMoneyDiscount = (prevPrice.toDouble() * (discount.toDouble()) / 100)
+        val totalAfterDiscount = (prevPrice.toFloat() - totalMoneyDiscount)
         val decimal = BigDecimal(totalAfterDiscount).setScale(2, RoundingMode.HALF_EVEN)
         return decimal.toString()
     }

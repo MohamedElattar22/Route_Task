@@ -7,6 +7,7 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.facebook.shimmer.Shimmer
+import com.google.android.material.snackbar.Snackbar
 import com.mobjoy.routetask.databinding.ActivityMainBinding
 import com.mobjoy.routetask.products.adapters.ProductsAdapter
 import dagger.hilt.android.AndroidEntryPoint
@@ -43,13 +44,27 @@ class ProductsActivity : AppCompatActivity() {
         //binding list from api
         getDataFromViewModel()
         //LoadingContent
-
         lifecycleScope.launch(Dispatchers.Main) {
             viewModel.isLoading.collect {
                 if (!it) {
                     hideShimmer()
                 } else {
                     showLoadingShimmer()
+                }
+            }
+
+        }
+        lifecycleScope.launch(Dispatchers.Main) {
+            viewModel.error.collect {
+                if (it) {
+                    Snackbar.make(
+                        this@ProductsActivity,
+                        viewBinding.root,
+                        "Some thing wint wron",
+                        Snackbar.LENGTH_SHORT
+                    ).setAction("Rety") {
+                        getDataFromViewModel()
+                    }
                 }
             }
         }
