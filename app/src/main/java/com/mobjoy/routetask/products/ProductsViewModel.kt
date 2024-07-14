@@ -18,7 +18,8 @@ class ProductsViewModel @Inject constructor(
 
     val productsList = MutableStateFlow(ProductsResponse())
     val isLoading = MutableStateFlow(false)
-    val error = MutableStateFlow("")
+    val errorMessage = MutableStateFlow("")
+    val error = MutableStateFlow(false)
     fun getAllProducts() {
         viewModelScope.launch(Dispatchers.IO) {
             isLoading.emit(true)
@@ -30,7 +31,9 @@ class ProductsViewModel @Inject constructor(
                 isLoading.emit(false)
             } catch (e: Exception) {
                 isLoading.emit(false)
-                error.emit(e.message.toString())
+                error.emit(true)
+            } finally {
+                isLoading.emit(false)
             }
 
         }
